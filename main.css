@@ -56,6 +56,15 @@ body {
 .socials__item {
     margin-left: 7.5px;
     margin-right: 7.5px;
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .socials__item:first-child {
@@ -66,10 +75,54 @@ body {
     margin-right: 0;
 }
 
+.socials__icon, .socials__icon path {
+    transition: .5s;
+}
+
+.socials__item:hover .socials__icon {
+    transform: rotateY(360deg);
+}
+
+.socials__item:hover .socials__icon path {
+    fill: #fff;
+}
+
+.socials__back {
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s;
+}
+
+.whatsup {
+    background-color: #48C95F;
+}
+
+.telegram {
+    background-color: #27A6E5;
+}
+
+.instagram {
+    background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
+}
+
+.vk {
+    background-color: #0077FF;
+}
+
+.socials__item:hover .socials__back {
+    top: 0;
+}
+
 .content {
     width: 100%;
     min-height: 800px;
     background-color: #cccccc;
+    background-image: url("./img/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .accordeon {
