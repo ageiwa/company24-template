@@ -33,7 +33,15 @@ body {
     justify-content: space-between;
 }
 
+.header__navbar {
+    display: flex;
+}
+
 .navbar__link {
+    position: relative;
+}
+
+.navbar__link a {
     margin-left: 10px;
     margin-right: 10px;
     color: #000;
@@ -48,6 +56,44 @@ body {
 .navbar__link:last-child {
     margin-right: 0;
 }
+
+.navbar__link::before {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    transition: .5s;
+}
+
+.navbar__link:hover::before {
+    width: 100%;
+}
+
+.navbar__link::after {
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 0%;
+    background-color: #000;
+    position: absolute;
+    transition: .5s;
+}
+
+.navbar__link:hover::after {
+    height: 100%;
+}
+
+/* .navbar__line-left {
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+}
+
+.navbar__line-right {
+
+} */
 
 .header__socials {
     display: flex;
