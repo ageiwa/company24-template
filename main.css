@@ -127,17 +127,6 @@ body {
     height: 100%;
 }
 
-/* .navbar__line-left {
-    width: 1px;
-    height: 100%;
-    background-color: #000;
-    position: absolute;
-}
-
-.navbar__line-right {
-
-} */
-
 .header__socials {
     display: flex;
 }
@@ -204,9 +193,13 @@ body {
     top: 0;
 }
 
+.header__btn-navbar {
+    display: none;
+}
+
 .content {
     width: 100%;
-    min-height: 800px;
+    height: auto;
     background-color: #cccccc;
     background-image: url("./img/background.jpeg");
     background-repeat: no-repeat;
@@ -228,6 +221,8 @@ body {
 .accordeon__header {
     padding-top: 50px;
     padding-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 
