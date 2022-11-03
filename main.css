@@ -37,27 +37,29 @@ body {
     display: flex;
 }
 
-.navbar__link {
+.navbar__item {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
     position: relative;
 }
 
-.navbar__link a {
-    margin-left: 10px;
-    margin-right: 10px;
+.navbar__item a {
+    margin: 5px;
     color: #000;
     font-size: 17px;
     text-decoration: none;
+    display: block;
 }
 
-.navbar__link:first-child {
+.navbar__item:first-child {
     margin-left: 0;
 }
 
-.navbar__link:last-child {
+.navbar__item:last-child {
     margin-right: 0;
 }
 
-.navbar__link::before {
+.navbar__item::before {
     content: "";
     width: 0%;
     height: 1px;
@@ -66,11 +68,12 @@ body {
     transition: .5s;
 }
 
-.navbar__link:hover::before {
+.navbar__item:hover::before {
     width: 100%;
 }
 
-.navbar__link::after {
+.navbar__item::after {
+    top: 0;
     left: 0;
     content: "";
     width: 1px;
@@ -80,7 +83,7 @@ body {
     transition: .5s;
 }
 
-.navbar__link:hover::after {
+.navbar__item:hover::after {
     height: 100%;
 }
 
