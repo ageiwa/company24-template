@@ -194,7 +194,30 @@ body {
 }
 
 .header__btn-navbar {
+    width: 32px;
+    height: 28px;
     display: none;
+    position: relative;
+}
+
+.btn-navbar__line {
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+}
+
+.btn-navbar__line:nth-child(1) {
+    top: 0;
+}
+
+.btn-navbar__line:nth-child(2), .btn-navbar__line:nth-child(3) {
+    top: 14px;
+}
+
+.btn-navbar__line:nth-child(4) {
+    bottom: 0;
 }
 
 .content {
