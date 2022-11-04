@@ -6,7 +6,7 @@
 }
 
 html {
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
@@ -337,6 +337,7 @@ body {
     top: 0;
     left: 100%;
     width: 100%;
+    min-width: 320px;
     min-height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
@@ -348,19 +349,17 @@ body {
 }
 
 .mobile-menu {
+    padding-left: 58px;
     left: 100%;
-    width: 66%;
+    width: 320px;
     height: 100%;
     background-color: #fff;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     transition: .3s;
 }
 
 .mobile-menu_open {
-    left: calc(100% - 66%);
+    left: calc(100% - 320px);
 }
 
 .mobile-menu__list {
@@ -380,4 +379,17 @@ body {
     color: #000;
     font-size: 24px;
     text-decoration: none;
+}
+
+.mobile-menu__socials {
+    margin-top: 45px;
+    display: flex;
+}
+
+.mobile-menu__socials .socials__item {
+    border: none;
+}
+
+.mobile-menu__socials .socials__icon path {
+    fill: #fff;
 }
