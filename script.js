@@ -84,7 +84,6 @@ function navbarBtnAnimate(action) {
         btnLine[0].style.top = '14px';
 
         btnLine[1].style.transform = 'rotate(45deg)';
-
         btnLine[2].style.transform = 'rotate(-45deg)';
 
         btnLine[3].style.left = '16px';

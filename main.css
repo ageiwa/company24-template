@@ -25,6 +25,7 @@ body {
 
 .header {
     width: 100%;
+    height: 70px;
     background-color: #fff;
     z-index: 1;
 }
@@ -201,18 +202,12 @@ body {
 }
 
 .header__btn-navbar {
-    top: 19px;
+    top: calc(-100% + 19px);
     left: calc(100% - 32px - 20px);
     width: 32px;
     height: 28px;
     display: none;
     z-index: 1;
-    position: absolute;
-}
-
-.btn-navbar__wrapper {
-    width: 32px;
-    height: 28px;
     position: relative;
 }
 
