@@ -34,4 +34,17 @@
     .accordeon {
         width: 100%;
     }
+
+    .footer__rigths {
+        font-size: 15px;
+    }
+    
+    .footer__made-by {
+        font-size: 9px;
+    }
+
+    .footer__logo {
+        padding: 6px 8px 6px 8px;
+        font-size: 16px;
+    }
 }

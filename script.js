@@ -1,6 +1,7 @@
 const navbarBtn = document.querySelector('.header__btn-navbar');
 
 navbarBtn.addEventListener('click', () => {
+    const header = document.querySelector('.header');
     const menuOverlay = document.querySelector('.mobile-menu__overlay');
     const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -8,6 +9,7 @@ navbarBtn.addEventListener('click', () => {
         setTimeout(() => {
             menuOverlay.classList.remove('mobile-menu__overlay_open');
             menuOverlay.style.display = 'none';
+            header.classList.remove('header_menu-open');
         }, 350);
 
         mobileMenu.classList.remove('mobile-menu_open');
@@ -15,6 +17,7 @@ navbarBtn.addEventListener('click', () => {
     else {
         menuOverlay.style.display = 'block';
         setTimeout(() => {
+            header.classList.add('header_menu-open');
             menuOverlay.classList.add('mobile-menu__overlay_open')
             mobileMenu.classList.add('mobile-menu_open');
         }, 0);

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
     overflow-x: hidden;
@@ -31,8 +31,11 @@ body {
 .header_fixed {
     left: 0;
     top: 0;
-    min-height: 100%;
     position: fixed;
+}
+
+.header_menu-open {
+    min-height: 100%;
 }
 
 .header .container {
@@ -321,8 +324,11 @@ body {
 }
 
 .footer__made-by {
+    white-space: nowrap;
     font-family: 'Karmatic Arcade', sans-serif;
     font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .footer__logo {
