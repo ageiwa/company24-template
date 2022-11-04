@@ -38,3 +38,35 @@ window.addEventListener('scroll', () => {
         content.classList.remove('content_header-fixed');
     }
 });
+
+const accordeonItems = document.querySelectorAll('.accordeon__item');
+
+accordeonItems.forEach(item => {
+    item.addEventListener('click', () => openAnswer(item));
+});
+
+function openAnswer(item) {
+    const answer = item.lastElementChild;
+    const arrow = item.firstElementChild.lastElementChild;
+
+    if (answer.classList.contains('accordeon__answer_open')) {
+        answer.classList.remove('accordeon__answer_open');
+        arrow.classList.remove('quest__arrow-icon_to-up');
+
+        closeAnswer();
+    }
+    else {
+        closeAnswer();
+
+        answer.classList.add('accordeon__answer_open');
+        arrow.classList.add('quest__arrow-icon_to-up');
+    }
+}
+
+function closeAnswer() {
+    const answers = document.querySelectorAll('.accordeon__answer_open');
+    const arrows = document.querySelectorAll('.quest__arrow-icon_to-up');
+
+    answers.forEach(answer => answer.classList.remove('accordeon__answer_open'));
+    arrows.forEach(arrow => arrow.classList.remove('quest__arrow-icon_to-up'));
+}
