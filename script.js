@@ -13,6 +13,8 @@ navbarBtn.addEventListener('click', () => {
         }, 350);
 
         mobileMenu.classList.remove('mobile-menu_open');
+
+        navbarBtnAnimate('close');
     }
     else {
         menuOverlay.style.display = 'block';
@@ -22,6 +24,7 @@ navbarBtn.addEventListener('click', () => {
             mobileMenu.classList.add('mobile-menu_open');
         }, 0);
         
+        navbarBtnAnimate('open');
     }
 });
 
@@ -69,4 +72,38 @@ function closeAnswer() {
 
     answers.forEach(answer => answer.classList.remove('accordeon__answer_open'));
     arrows.forEach(arrow => arrow.classList.remove('quest__arrow-icon_to-up'));
+}
+
+function navbarBtnAnimate(action) {
+    const btnLine = document.querySelectorAll('.btn-navbar__line');
+
+    if (action === 'open') {
+        btnLine[0].style.left = '16px';
+        btnLine[0].style.width = '0';
+        btnLine[0].style.height = '0';
+        btnLine[0].style.top = '14px';
+
+        btnLine[1].style.transform = 'rotate(45deg)';
+
+        btnLine[2].style.transform = 'rotate(-45deg)';
+
+        btnLine[3].style.left = '16px';
+        btnLine[3].style.width = '0';
+        btnLine[3].style.height = '0';
+        btnLine[3].style.top = '14px';
+    }
+    else {
+        btnLine[0].style.left = '0';
+        btnLine[0].style.width = '32px';
+        btnLine[0].style.height = '2px';
+        btnLine[0].style.top = '0';
+
+        btnLine[1].style.transform = 'rotate(0deg)';
+        btnLine[2].style.transform = 'rotate(0deg)';
+        
+        btnLine[3].style.left = '0';
+        btnLine[3].style.width = '32px';
+        btnLine[3].style.height = '2px';
+        btnLine[3].style.top = '28px';
+    }
 }

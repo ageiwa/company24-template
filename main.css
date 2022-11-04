@@ -222,6 +222,7 @@ body {
     background-color: #000;
     display: block;
     position: absolute;
+    transition: .25s;
 }
 
 .btn-navbar__line:nth-child(1) {
@@ -233,7 +234,7 @@ body {
 }
 
 .btn-navbar__line:nth-child(4) {
-    bottom: 0;
+    top: 28px;
 }
 
 .content {
